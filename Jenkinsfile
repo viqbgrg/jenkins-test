@@ -1,14 +1,9 @@
 pipeline {
-     agent {
-            docker {
-                image 'maven:3-alpine'
-                args '-v C:/Users/nnj/.m2'
-            }
-        }
+    agent { docker 'maven:3.3.3' }
     stages {
         stage('build') {
             steps {
-                bat 'mvn -B -DskipTests clean package'
+                sh 'mvn --version'
             }
         }
     }
