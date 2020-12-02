@@ -5,7 +5,7 @@ pipeline {
 
         stage('Deploy - Production') {
             steps {
-                bat 'start call deploy.bat'
+                bat 'call deploy.bat'
             }
         }
     }
