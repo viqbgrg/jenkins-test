@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                bat 'mvn -B -DskipTests clean package'
             }
         }
 
         stage('Deploy - Production') {
             steps {
-                echo '部署'
+                bat 'call deploy.bat'
             }
         }
     }
