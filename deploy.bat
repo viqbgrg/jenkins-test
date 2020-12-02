@@ -6,4 +6,4 @@ for /f "tokens=1-5" %%i in ('netstat -ano^|findstr ":%port%"') do (
 )
 copy target\jenkins-test-0.0.1-SNAPSHOT.jar test.jar
 start call java -jar test.jar
-exit
+exit 0
