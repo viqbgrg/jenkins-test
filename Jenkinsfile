@@ -5,7 +5,7 @@ pipeline {
 
         stage('Deploy - Production') {
             steps {
-                bat 'call deploy.bat'
+                bat 'ping baidu.com -t'
             }
         }
     }
